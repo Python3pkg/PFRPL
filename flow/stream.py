@@ -45,7 +45,7 @@ class Stream(Destructible):
 
     def removechild(self, child):
         super(Stream, self).removechild(child)
-        if child in self._tocall.keys():
+        if child in list(self._tocall.keys()):
             del self._tocall[child]
 
     def run(self):
